@@ -19,8 +19,11 @@ class BinarySearch {
     }
 
     public static void main(String[] args) {
+
         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] targets = { 2, 5, 11, 1000, 2000 };
+
+        long startTime = System.nanoTime();
 
         for (int target : targets) {
 
@@ -32,5 +35,9 @@ class BinarySearch {
             }
         }
 
+        long endTime = System.nanoTime();
+
+        System.out.println("Execution time: " + (endTime - startTime)/ 1_000_000_000.0 + " seconds");
     }
+
 }
