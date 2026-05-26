@@ -1,3 +1,4 @@
+package Strings;
 public class FirstUniqueCharacter {
     public void firstUniqChar(String s) {
         int[] charCount = new int[26];
