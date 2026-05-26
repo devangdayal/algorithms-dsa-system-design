@@ -1,4 +1,3 @@
-package Custom;
 
 class TowerOfHanoi{
 

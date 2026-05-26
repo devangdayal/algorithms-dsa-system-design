@@ -4,7 +4,6 @@
 
 // Matrix can have empty rows or empty columns.
 
-package Matrix;
 
 import java.util.ArrayList;
 import java.util.HashMap;
