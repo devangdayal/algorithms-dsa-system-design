@@ -1,5 +1,3 @@
-package algorithms.sort_algo;
-
 public class BubbleSort {
 
     public void bubbleSort(int[] arr) {
