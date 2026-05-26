@@ -11,6 +11,7 @@
 -- Return the result table in any order.
 -- The result format is in the following example.
 SELECT
+DISTINCT
     lg1.num as ConsecutiveNums
 FROM
     Logs Lg1
