@@ -1,15 +1,35 @@
-.vscode
-
-*.class
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
 *.iml
-*.xml
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Ignored default folder with query files
-/queries/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+
+# =========================
+# Java build files
+# =========================
+*.class
+out/
+build/
+target/
+
+# =========================
+# IntelliJ defaults
+# =========================
+.idea/shelf/
+.idea/workspace.xml
+.idea/httpRequests/
+.idea/queries/
+.idea/dataSources/
+.idea/dataSources.local.xml
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
