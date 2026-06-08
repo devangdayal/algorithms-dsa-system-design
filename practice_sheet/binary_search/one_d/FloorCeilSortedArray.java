@@ -10,7 +10,7 @@ public class FloorCeilSortedArray {
     }
 
     public int[] floorCeilArray(int[] nums, int target) {
-        return new int[]{ceilArray(nums, target), floorArray(nums, target)};
+        return new int[]{ceilValue(nums, target), floorValue(nums, target)};
     }
 
     private int ceilValue(int[] nums, int target) {
