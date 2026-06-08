@@ -13,36 +13,35 @@ public class FloorCeilSortedArray {
         return new int[]{ceilArray(nums, target), floorArray(nums, target)};
     }
 
-    private int ceilArray(int[] nums, int target) {
-
-        int left = 0, right = nums.length - 1;
-        int answer = -1;
-        while (left <= right) {
-            int middle = left + (right - left) / 2;
-
-            if (nums[middle] >= target) {
-                answer = middle;
-                right = middle - 1;
-            } else {
-                left = middle + 1;
+    private int ceilValue(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        int ans = -1;
+        while(left <= right){
+            int mid = left + (right-left)/2;
+            if(nums[mid] >= target){
+                ans = nums[mid];
+                right = mid - 1;
+            }else{
+                left = mid + 1;
             }
         }
-        return answer;
+        return ans;
     }
 
-    private int floorArray(int[] nums, int target) {
-        int left = 0, right = nums.length - 1;
-        int answer = -1;
-        while (left <= right) {
-            int middle = left + (right - left) / 2;
-
-            if (nums[middle] <= target) {
-                answer = middle;
-                left = middle + 1;
-            } else {
-                right = middle - 1;
+    private int floorValue(int[] nums, int target){
+        int left = 0;
+        int right = nums.length - 1;
+        int ans = -1;
+        while(left <= right){
+            int mid = left + (right-left)/2;
+            if(nums[mid] <= target){
+                ans = nums[mid];
+                left = mid + 1;
+            }else{
+                right = mid - 1;
             }
         }
-        return answer;
+        return ans;
     }
 }
