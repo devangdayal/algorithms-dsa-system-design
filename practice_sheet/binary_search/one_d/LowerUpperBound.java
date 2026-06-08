@@ -10,7 +10,7 @@ public class LowerUpperBound {
 
     public int findLowerBound(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
-        int bound = 0;
+        int bound = nums.length;
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
@@ -27,7 +27,7 @@ public class LowerUpperBound {
 
     public int findUpperBound(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
-        int bound = 0;
+        int bound = nums.length;
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
