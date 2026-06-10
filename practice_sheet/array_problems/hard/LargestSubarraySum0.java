@@ -1,0 +1,36 @@
+import java.util.HashMap;
+
+public class LargestSubarraySum0 {
+
+    static void main(String[] args) {
+        int[] numbers =  {15, -2, 2, -8, 1, 7, 10, 23};
+
+        LargestSubarraySum0 largestSubarraySum0 = new LargestSubarraySum0();
+
+        System.out.println(largestSubarraySum0.largestSubarraySum0(numbers));
+
+    }
+
+
+    public int largestSubarraySum0(int[] nums) {
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        map.put(0, -1);
+
+        int sum = 0, maxLength = 0;
+
+
+        for (int i = 0; i < nums.length; i++) {
+
+            sum += nums[i];
+
+            if (map.containsKey(sum)) {
+                maxLength = Math.max(maxLength, i - map.get(sum));
+            } else {
+                map.put(sum, i);
+            }
+        }
+        return maxLength;
+    }
+}
