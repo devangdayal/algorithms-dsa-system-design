@@ -5,8 +5,6 @@ public class RotateArrayK {
     public void rotateArrayByK(int[] num, int k) {
 
         int n = num.length;
-
-        // Edge case: empty array
         if (n == 0) return;
 
         // If k > n, rotating n times gives same array
